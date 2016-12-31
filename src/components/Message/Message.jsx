@@ -7,7 +7,7 @@ class Message extends Component {
         let createdAt = fecha.format(message.createdAt, 'HH:mm:ss MM/DD/YYYY');
         return (
             <li className = 'message'>
-                <div classname = 'author'>
+                <div className = 'author'>
                     <strong>{message.author}</strong>
                     <i className = 'timestamp'>{createdAt}</i>
                 </div>
