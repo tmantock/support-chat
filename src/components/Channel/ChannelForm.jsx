@@ -3,15 +3,17 @@ import React, { Component, PropTypes } from 'react';
 class ChannelForm extends Component {
     onSubmit(event) {
         event.preventDefault();
-
-        const channelName = this.refs.channel.value;
+        const node = this.refs.channel
+        const channelName = node.value;
         this.props.addChannel(channelName);
-        channelName = '';
+        node.value = '';
     }
     render () {
         return (
             <form onSubmit = {this.onSubmit.bind(this)}>
-                <input type='text' ref='channel' />
+                <div className = 'form-group'>
+                    <input type='text' placeholder = 'Add Channel' ref='channel' />
+                </div>
             </form>
         )
     }
